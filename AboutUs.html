@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <style>
+    .about-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .flex-side {
+      flex-grow: 2;
+      flex-basis: 10px;
+    }
+
+    #showContactButton {
+      padding: 1%;
+      color: #000;
+      cursor: pointer;
+      border-radius: 10%;
+      background-color: cornsilk;
+      position: relative;
+    }
+
+    #showContactButton::after {
+      content: "";
+      background: #075757;
+      width: 125%;
+      height: 5px;
+      border-radius: 5px;
+      position: absolute;
+      top: 51px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .t-text {
+      margin: 20px auto;
+      box-shadow: 1px 5px 9px rgb(255, 0, 0, 0.5);
+    }
+
+    #contact .container {
+      padding: 50px;
+      margin: 0;
+      background-color: cornsilk;
+      direction: rtl;
+      border: 1px solid #075757;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      gap: 100px;
+      color: #000;
+    }
+
+    #contact .container .left {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    #contact .container .left h1 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    #contact .container .left p {
+      font-size: 1.5rem;
+    }
+
+    #contact .container .left form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    #contact .container .left form input {
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid black;
+      padding: 0 10px;
+      font-size: 1rem;
+    }
+
+    #contact .container .left form label {
+      font-size: 1.25rem;
+    }
+
+    #contact .container .left form textarea {
+      height: 200px;
+      border-radius: 5px;
+      border: 1px solid black;
+      padding: 10px;
+      font-family: "Source Sans Pro";
+      font-size: 1rem;
+      max-width: 711px;
+    }
+
+    #contact .container .left form .validation {
+      font-size: 1rem;
+      color: crimson;
+      font-weight: bold;
+    }
+
+    #contact .container .left form .name {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    #contact .container .left form .name .firstName,
+    #contact .container .left form .name .lastName {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 5px;
+    }
+
+    #contact .container .left form .email,
+    #contact .container .left form .phone,
+    #contact .container .left form .message,
+    #contact .container .left form .address {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    #contact .container .left form button {
+      border-radius: 5px;
+      height: 40px;
+      font-family: "Source Sans Pro";
+      font-size: 1rem;
+      border: 1px solid #064e4e;
+      background-color: #064e4e;
+      color: white;
+      transition: 0.3s;
+    }
+
+    #contact .container .left form button:hover {
+      color: #086464;
+      background-color: white;
+      border: 1px solid #064e4e;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    #send {
+      cursor: pointer;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+      }
+
+      #contact .container {
+        flex-direction: column;
+        gap: 50px;
+      }
+
+      #contact .container .left,
+      #contact .container .right {
+        width: 100%;
+      }
+    }
+  </style>
+  <title>عن المنتخب</title>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="nav-wrapper">
+      <div class="grad-bar"></div>
+      <nav class="navbar">
+        <a href="index.html">
+          <img src="logo.svg" alt=" Logo" />
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+          <li class="nav-item"><a href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a href="news.html">الأخبار</a></li>
+          <li class="nav-item"><a href="matches.html">المباريات</a></li>
+          <li class="nav-item"><a href="lineup.html">اللاعبين</a></li>
+          <li class="nav-item"><a href="playerRating.html">التقييم</a></li>
+          <li class="nav-item"><a href="AboutUs.html">عن المنتخب</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="about-container">
+    <section dir="rtl" class="flex-side" id="aboutUs"
+      style="background-color: #f8f8f8; padding: 50px; text-align: center">
+      <div class="container" style="display: flex; flex-direction: column; align-items: center">
+        <div class="left" style="max-width: 600px; text-align: center">
+          <h1 style="font-size: 36px; color: #333">عن المنتخب</h1>
+          <p class="t-text" style="font-size: 18px; color: #666; line-height: 1.6">
+            تأسس عام : 1962م انضم إلى الاتحاد الآسيوي ( AFC ) : 1962م انضم إلى
+            الاتحاد الدولي (FIFA ) : 1980م الاتحاد الفرعي: الاتحاد العربي لكرة
+            القدم اتحاد غرب آسيا لكرة القدم (West Asia) المقر : امانة العاصمة
+            – صنعاء (مدينة الثورة الرياضية) هاتف: +967 1 310 923 فاكس: +967 1
+            431 953 بريد الكتروني : yemenfootball@yahoo.com موقع الانترنت :
+            Yemenfa.com رئيس الاتحاد: احمد صالح العيسي الملعب الرئيسي: ملعب
+            علي محسن المريسي صنعاء / استاد عدن الدولي ( خارج الجاهزية بسبب
+            الحرب) الطاقم واللاعبون: المدرب : التشيكي ميروسلاف سوكوب مدير
+            المنتخب : جمال الخوربي / قائد المنتخب اليمني ووحدة صنعاء سابقا
+            القائد : مدير عبدربه الرداعي ( لاعب صقر تعز حاليا) الهداف التاريخي
+            : علي النونو (29) الأكثر مشاركة : علاء الصاصي (87) مراتب : تصنيف
+            الفيفا 153 (أغسطس 2022) أعلى تصنيف:90 (أغسطس 1993) أدنى تصنيف: 186
+            (فبراير 2014) مباريات تاريخية المباراة الدولية الأولى: قبل الوحدة:
+            السودان 9–0 اليمن الشمالي (مصر؛ 5 سبتمبر 1965) بعد الوحدة: ماليزيا
+            0–1 اليمن (كوالالمبور، ماليزيا؛ 8 سبتمبر 1990) - أكبر فوز: اليمن
+            11–2 بوتان (مدينة الكويت، الكويت؛ 18 فبراير 2000) - أكبر خسارة:
+            ليبيا 16–1 اليمن الشمالي (القاهرة، الجمهورية العربية المتحدة؛
+            أغسطس 1965) مشاركات:
+          </p>
+          <p class="t-text" style="font-size: 18px; color: #666; line-height: 1.6">
+            ليس لليمن تاريخ زاخر بالإنجازات في كرة القدم. فالجمهور اليمني لا ينتظر كثيرا من منتخب بلاده، ويجد فرصة
+            للاحتفاء عندما لا تكون الخسارة كبيرة. لم يفز المنتخب اليمني بأي مباراة في منافسات كأس الخليج، التي شارك فيها
+            27 مرة، ولكنه فاز مرتين وتعادل أربع مرات في تصفيات كأس آسيا 2019.
+          </p>
+        </div>
+        <div class="right" style="margin-top: 30px">
+          <img src="images/football-stadium-background.avif" alt="About Us" style="max-width: 100%; height: auto" />
+        </div>
+      </div>
+      <button id="showContactButton">تواصل معنا</button>
+    </section>
+    <section id="contact">
+      <div class="container flex-side" id="contactContainer" style="display: none">
+        <div class="left">
+          <h1>تواصل معنا</h1>
+          <p>سيتم الرد عليكم في اقرب وقت ممكن</p>
+          <form action="" onsubmit="return validate()" id="contactForm">
+            <div class="name">
+              <div class="firstName">
+                <label for="firstName">الاسم الأول</label>
+                <input type="text" id="firstName" placeholder="اسمك" />
+                <p class="validation firstNameValidation"></p>
+              </div>
+              <div class="lastName">
+                <label for="firstName">اللقب</label>
+                <input type="text" id="lastName" placeholder="Last Name" />
+                <p class="validation lastNameValidation"></p>
+              </div>
+            </div>
+            <div class="email">
+              <label for="email">الأيميل</label>
+              <input type="email" id="email" placeholder="Email Address" />
+              <p class="validation emailValidation"></p>
+            </div>
+            <div class="phone">
+              <label for="phoneNumber">رقم الهاتف</label>
+              <input type="text" id="phoneNumber" placeholder="Phone Number" />
+              <p class="validation phoneNumberValidation"></p>
+            </div>
+            <div class="address">
+              <label for="address">العنوان </label>
+              <input type="text" id="address" placeholder="Your Address (اختياري)" />
+              <p class="validation addressValidation"></p>
+            </div>
+            <div class="message">
+              <label for="message">رسالتك</label>
+              <textarea name="" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+              <p class="validation messageValidation"></p>
+            </div>
+            <button id="send" type="submit">ارسال</button>
+          </form>
+        </div>
+      </div>
+      <script>
+        const showContactButton =
+          document.getElementById("showContactButton");
+        const contactContainer = document.getElementById("contactContainer");
+
+        showContactButton.addEventListener("click", function () {
+          if (contactContainer.style.display === "none") {
+            contactContainer.style.display = "block";
+          } else {
+            contactContainer.style.display = "none";
+          }
+        });
+        firstName = document.querySelector("#firstName");
+        firstNameValidation = document.querySelector(".firstNameValidation");
+        lastName = document.querySelector("#lastName");
+        lastNameValidation = document.querySelector(".lastNameValidation");
+        email = document.querySelector("#email");
+        emailValidation = document.querySelector(".emailValidation");
+        phoneNumber = document.querySelector("#phoneNumber");
+        phoneNumberValidation = document.querySelector(
+          ".phoneNumberValidation"
+        );
+        message = document.querySelector("#message");
+        messageValidation = document.querySelector(".messageValidation");
+
+        function validate() {
+          firstName.style.border = "1px solid black";
+          lastName.style.border = "1px solid black";
+          email.style.border = "1px solid black";
+          phoneNumber.style.border = "1px solid black";
+          message.style.border = "1px solid black";
+          firstNameValidation.innerHTML = "";
+          lastNameValidation.innerHTML = "";
+          emailValidation.innerHTML = "";
+          phoneNumberValidation.innerHTML = "";
+          messageValidation.innerHTML = "";
+          var nameRegex = /^[\u0600-\u06FF\u0750-\u077Fa-zA-Z ]+$/;
+          if (!nameRegex.test(firstName.value)) {
+            firstName.style.border = "2px solid crimson";
+            firstNameValidation.innerHTML = "يجب أن يحتوي الاسم على حروف عربية أو إنجليزية فقط!";
+
+          }
+          if (!nameRegex.test(lastName.value)) {
+            lastName.style.border = "2px solid crimson";
+            lastNameValidation.innerHTML = "يجب أن يحتوي الاسم على حروف عربية أو إنجليزية فقط!";
+
+          }
+
+          if (firstName.value == "") {
+            firstName.style.border = "2px solid crimson";
+            firstNameValidation.innerHTML = "Field cannot be empty!";
+          }
+          if (lastName.value == "") {
+            lastName.style.border = "2px solid crimson";
+            lastNameValidation.innerHTML = "Field cannot be empty!";
+          }
+          if (email.value == "") {
+            email.style.border = "2px solid crimson";
+            emailValidation.innerHTML = "Field cannot be empty!";
+          }
+          var phoneRegex = /^\d{9}$/;
+          if (!phoneRegex.test(phoneNumber.value)) {
+            phoneNumber.style.border = "2px solid crimson";
+            phoneNumberValidation.innerHTML = "يجب أن يحتوي رقم الهاتف على 9 أرقام فقط!";
+
+          }
+          if (phoneNumber.value == "") {
+            phoneNumber.style.border = "2px solid crimson";
+            phoneNumberValidation.innerHTML = "Field cannot be empty!";
+          }
+          if (message.value == "") {
+            message.style.border = "2px solid crimson";
+            messageValidation.innerHTML = "Field cannot be empty!";
+          }
+          if (
+            firstName.value == "" ||
+            lastName.value == "" ||
+            email.value == "" ||
+            phoneNumber.value == "" ||
+            message.value == ""
+          ) {
+            return false;
+          }
+          alert("تم إرسال الرسالة بنجاح!");
+        }
+      </script>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>جميع الحقوق محفوظة &copy; 2023 المنتخب اليمني</p>
+      <nav>
+        <a href="index.html">الصفحة الرئيسية</a> |
+        <a href="matches.html">المباريات</a> |
+        <a href="news.html">الأخبار</a> |
+        <a href="lineup.html">المنتخب الوطني</a> |
+        <a href="playerRating.html">التقييم</a>
+        |
+        <a href="AboutUs.html">عن المنتخب</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
